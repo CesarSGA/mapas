@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mapas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bs2-Vf-etj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmw-rp-SJZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wl-Yx-ZWJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="376" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-zK-peV">
+                                        <rect key="frame" x="376" y="0.0" width="38" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="n28-yB-wMf"/>
+                                            <constraint firstAttribute="height" constant="51" id="ujF-th-Gsg"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" image="paperplane.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="getLocalitation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5SV-le-u41"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="kmw-rp-SJZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4kN-eN-1pY"/>
+                            <constraint firstItem="kmw-rp-SJZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Xn-Qp-NLj"/>
+                            <constraint firstItem="Bs2-Vf-etj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8cx-5B-Lm9"/>
+                            <constraint firstAttribute="bottom" secondItem="Bs2-Vf-etj" secondAttribute="bottom" id="AcR-V6-hWc"/>
+                            <constraint firstItem="Bs2-Vf-etj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DHp-W2-JRO"/>
+                            <constraint firstItem="Bs2-Vf-etj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Djv-Dd-M6e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kmw-rp-SJZ" secondAttribute="trailing" id="ddT-cA-fp0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MapView" destination="Bs2-Vf-etj" id="SBq-co-heQ"/>
+                        <outlet property="SearchBar" destination="5wl-Yx-ZWJ" id="rA6-uK-vDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
